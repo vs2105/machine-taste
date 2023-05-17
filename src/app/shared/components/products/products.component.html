@@ -1,0 +1,54 @@
+<div class="container mt-4">
+  <h1>Products</h1>
+  <hr>
+      <div class="row">
+        <div class="col-sm-2">
+          <h3>Filters</h3>
+          <p>Count:</p>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Expired
+            </label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+            <label class="form-check-label" for="defaultCheck1">
+              Low Stock
+            </label>
+          </div>
+        </div>
+        <div class="col-sm-10">
+          <table class="table table-borderd my-5">
+            <thead>
+               <tr>
+                   <th>ID</th>
+                   <th>Product Name</th>
+                   <th>Product Brand</th>
+                   <th>Expiry Date</th>
+                   <th>Unit Price</th>
+                   <th>Stock</th>
+               </tr>
+            </thead>
+            <tbody>
+               <tr *ngFor="let prod of ProdutArr; index as i">
+               
+                  <td>{{prod.id}}</td>
+                  <td>{{prod.medicineName}}</td>
+                  <td>{{prod.medicineBrand}}</td>
+                  <td>{{prod.expiryDate}}</td>
+                  <td>${{prod.unitPrice}}</td>
+                  <td>{{prod.stock}}</td>
+               </tr>
+            </tbody>
+         </table>
+        </div>
+       
+       
+      </div>
+
+      
+
+     
+  
+</div>

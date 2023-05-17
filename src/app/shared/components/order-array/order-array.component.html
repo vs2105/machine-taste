@@ -1,0 +1,64 @@
+<div class="container mt-4">
+    <h1>Orders</h1>
+    <hr>
+        <div class="row">
+          <div class="col-sm-2">
+            <h3>Filters</h3>
+            <p>Count:</p>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+               New
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+              <label class="form-check-label" for="defaultCheck1">
+                Packed
+              </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  InTransit
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                <label class="form-check-label" for="defaultCheck1">
+                  Delivered
+                </label>
+              </div>
+          </div>
+          <div class="col-sm-10">
+            <table class="table table-borderd my-5">
+              <thead class="thead-dark">
+                 <tr>
+                     <th>ID</th>
+                     <th>Customer</th>
+                     <th>Date</th>
+                     <th>Amount</th>
+                     <th>Status</th>
+                 </tr>
+              </thead>
+              <tbody>
+                 <tr *ngFor="let order of orderArr; index as i">
+                 
+                    <td>{{order.id}}</td>
+                    <td>{{order.customerName}}</td>
+                    <td>{{order.orderDate}}</td>
+                    <td>${{order.amount}}</td>
+                    <td>{{order.orderStatus}}</td>
+                 </tr>
+              </tbody>
+           </table>
+          </div>
+         
+         
+        </div>
+  
+        
+  
+       
+    
+  </div>
